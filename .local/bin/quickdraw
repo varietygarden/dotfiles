@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# This gives the user a list of websites they can select and visit from
+# within the system default browser. Add/remove entries at your whim.
+
+quickdraw="
+/g/ - Technology	https://boards.4channel.org/g/catalog
+/wg/ - Wallpapers/General	https://boards.4chan.org/wg/catalog
+/v/ - Video Games	https://boards.4channel.org/v/catalog
+/out/ - Outdoors	https://boards.4channel.org/out/catalog
+/pol/ - Politically Incorrect	https://boards.4chan.org/pol/catalog
+/bant/ - International/Random	https://boards.4chan.org/bant/catalog
+/f/ - Flash	https://boards.4chan.org/f/
+
+"
+echo "$quickdraw" | grep -P "^$(echo "$quickdraw" | grep "https:" | sed 's/\t.*//g' | dmenu -i -p "Select a board with [ENTER], or press [ESC] to cancel." -l 20 | awk '{print $1}')\s" | sed 's/.*\t//' | xargs -r $BROWSER
