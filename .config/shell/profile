@@ -13,7 +13,7 @@ unsetopt PROMPT_SP
 # Default programs:
 export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="librewolf"
+export BROWSER="qutebrowser"
 
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"
@@ -104,6 +104,7 @@ ex=🎯:\
 *.opus=🎵:\
 *.ogg=🎵:\
 *.m4a=🎵:\
+*.3gp=📱:\
 *.flac=🎼:\
 *.wav=🎼:\
 *.mkv=🎥:\
@@ -116,6 +117,7 @@ ex=🎯:\
 *.wmv=🎥:\
 *.m4b=🎥:\
 *.flv=🎥:\
+*.swf=⚡:\
 *.zip=📦:\
 *.rar=📦:\
 *.7z=📦:\
